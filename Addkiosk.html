@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/filepond/dist/filepond.css" rel="stylesheet">
+    <link href="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/admin-lte/3.2.0/css/adminlte.min.css"
+        integrity="sha512-IuO+tczf4J43RzbCMEFggCWW5JuX78IrCJRFFBoQEXNvGI6gkUw4OjuwMidiS4Lm9Q2lILzpJwZuMWuSEeT9UQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Add kiosk | from</title>
+</head>
+
+<body>
+    <div class="modal-dialog modal-xl modal-dialog-scrollable" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">All Kiosks - Add kiosk</h5>
+                <button type="button" class="close" wire:click="closeModal()" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body" style="min-height: 200px">
+
+                <div wire:id="o8VgbQU87VhB6gXvDH3T">
+                    <form class="form-horizontal" wire:submit.prevent="submit">
+                        <div class="card-body">
+                            <div class="form-group row">
+                                <label class="col-sm-2 col-form-label">Theme id</label>
+                                <div class="col-sm-10">
+                                    <select class="form-control" placeholder="Parent Category">
+                                        <option value="">Select</option>
+                                        <option value="125">1</option>
+                                        <option value="66">2</option>
+                                        <option value="66">3</option>
+                                        <option value="66">4</option>
+                                        <option value="66">5</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="form-group row">
+                                <label class="col-sm-2 col-form-label">Title</label>
+                                <div class="col-sm-10">
+                                    <input type="text" name="url" class="form-control" wire:model.lazy="url"
+                                        placeholder="Title Here">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="form-group row">
+                                <label class="col-sm-2 col-form-label">Theme Title</label>
+                                <div class="col-sm-10">
+                                    <input type="text" name="url" class="form-control" wire:model.lazy="url"
+                                        placeholder="Theme Title Here">
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="form-group row">
+                                <label class="col-sm-2 col-form-label">Setting</label>
+                                <div class="col-sm-10">
+                                    <input type="text" name="url" class="form-control" wire:model.lazy="url"
+                                        placeholder="{}">
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="form-group row">
+                                <label class="col-sm-2 col-form-label">Screen Saver</label>
+                                <div class="col-sm-10">
+                                    <img src="https://diyorajewellery.in/storage/upload/3LZkOlvq3V3UtZHPhib66l3bfnJPBYdH1neYERXC.png"
+                                        class="mb-3" width="100%" height="150px;" alt="No image" srcset="">
+
+                                    <div wire:ignore="" x-data="" x-init="
+                       async () => {
+                
+                            const promise3 = new Promise((resolve, reject) => {
+                              setTimeout(resolve, 100, 'foo');
+                            });
+                            await promise3;
+                            const post = FilePond.create($refs.input);
+                            post.setOptions({
+                                allowMultiple: false,
+                                server: {
+                                    process:(fieldName, file, metadata, load, error, progress, abort, transfer, options) => {
+                                        window.livewire.find('IBxukeFxk80wQ3igRgMg').upload('files', file, load, error, progress)
+                                    },
+                                    revert: (filename, load) => {
+                                        window.livewire.find('IBxukeFxk80wQ3igRgMg').removeUpload('files', filename, load)
+                                    },
+                                },
+                                allowImagePreview: true,
+                                imagePreviewMaxHeight: 200,
+                                allowFileTypeValidation: true,
+                                acceptedFileTypes: ['image/png', 'image/jpg'],
+                                allowFileSizeValidation: true,
+                                maxFileSize: '4mb',
+                                labelFileProcessing:'Validating..',
+                                labelFileProcessingComplete : 'Will be uploaded',
+                                labelIdle:'Change Image',
+                            });
+                        }
+                    ">
+                                        <div class="filepond--root filepond--hopper"
+                                            data-style-button-remove-item-position="left"
+                                            data-style-button-process-item-position="right"
+                                            data-style-load-indicator-position="right"
+                                            data-style-progress-indicator-position="right"
+                                            data-style-button-remove-item-align="false" style="height: 76px;"><input
+                                                class="filepond--browser" type="file" id="filepond--browser-fmatsowrp"
+                                                name="filepond" aria-controls="filepond--assistant-fmatsowrp"
+                                                aria-labelledby="filepond--drop-label-fmatsowrp"
+                                                accept="image/png,image/jpg"><a class="filepond--credits"
+                                                aria-hidden="true" href="https://pqina.nl/" target="_blank"
+                                                rel="noopener noreferrer" style="transform: translateY(68px);">Powered
+                                                by PQINA</a>
+                                            <div class="filepond--drop-label"
+                                                style="transform: translate3d(0px, 0px, 0px); opacity: 1;"><label
+                                                    for="filepond--browser-fmatsowrp"
+                                                    id="filepond--drop-label-fmatsowrp" aria-hidden="true">Change
+                                                    Image</label></div>
+                                            <div class="filepond--list-scroller"
+                                                style="transform: translate3d(0px, 0px, 0px);">
+                                                <ul class="filepond--list" role="list"></ul>
+                                            </div>
+                                            <div class="filepond--panel filepond--panel-root" data-scalable="true">
+                                                <div class="filepond--panel-top filepond--panel-root"></div>
+                                                <div class="filepond--panel-center filepond--panel-root"
+                                                    style="transform: translate3d(0px, 8px, 0px) scale3d(1, 0.6, 1);">
+                                                </div>
+                                                <div class="filepond--panel-bottom filepond--panel-root"
+                                                    style="transform: translate3d(0px, 68px, 0px);"></div>
+                                            </div><span class="filepond--assistant" id="filepond--assistant-fmatsowrp"
+                                                role="status" aria-live="polite" aria-relevant="additions"></span>
+                                            <div class="filepond--drip"></div>
+                                            <fieldset class="filepond--data"></fieldset>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="card-body">
+                            <div class="form-group row">
+                                <label class="col-sm-2 col-form-label">Description</label>
+                                <div class="col-sm-10">
+                                    <textarea name="description" class="form-control" wire:model.lazy="description"
+                                        placeholder="Optional Description" cols="30" rows="5"></textarea>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card-footer">
+                            <button type="submit" class="btn btn-info" wire:loading.attr="disabled">Add</button>
+                        </div>
+
+                    </form>
+                </div>
+
+                <!-- Livewire Component wire-end:o8VgbQU87VhB6gXvDH3T -->
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
